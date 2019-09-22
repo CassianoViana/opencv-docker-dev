@@ -9,7 +9,7 @@
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceFolder}/a.out",
-            "args": ["/home/cassiano/Pictures/cassiano2.jpg"],
+            "args": ["${workspaceFolder}/coins.jpeg"],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
             "miDebuggerPath": "/usr/bin/gdb",
