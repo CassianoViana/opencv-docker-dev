@@ -14,6 +14,7 @@ int main(int argc, char **argv)
     }
 
     Mat image, canned, sobed, robed;
+
     image = imread(argv[1], 1);
     
     Canny(image, canned, 200, 255);
