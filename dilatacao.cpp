@@ -59,10 +59,13 @@ int main(int argc, char **argv)
     Mat image;
 
     image = imread(argv[1], 1);
-    Mat dilated = dilatacao(image);
-    //Mat dilated;
-    Mat structuringElement = getStructuringElement(MORPH_RECT, Size(5, 5), Point(0,0));
-    //dilate(image, dilated, structuringElement);
+    //Mat dilated = dilatacao(image);
+    Mat dilated;
+    Mat gray;
+    cvtColor(image, gray, COLOR_BGR2GRAY);
+    Mat bw = gray > 128;
+    Mat structuringElement = getStructuringElement(MORPH_RECT, Size(7, 7), Point(0,0));
+    dilate(bw, dilated, structuringElement);
 
     imshow("Dilated Image", dilated);
 
